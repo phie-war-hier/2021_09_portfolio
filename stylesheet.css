@@ -13,6 +13,7 @@ body {
 	padding: 0;
 	margin: 0;
 	position: relative;
+
 }
 
 
@@ -107,9 +108,8 @@ a:focus-visible {
 
 /*Bilder der Projekte*/
 .showcase img {
-	width: 100%;
 	height: auto;
-
+	width: 100%;
 }
 
 /*Rechts/Oben: Über mich + Kontaktmöglichkeiten*/
