@@ -8,68 +8,73 @@
 		<meta name="author" content="sophie humbert">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 
-
 		<link rel="stylesheet" href="stylesheet.css">	
-
-
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
-		<div class="container-content">	
-			<div class="item-content about">
-				<div class="container-about">
-					<div class="item-about">
-						<div class="text">sophie humbert</div>
-						<div class="text">ulmenweg 55 haus 5 zimmer 7</div>
-						<div class="text">68167 mannheim</div>
-						<br>
-						<div class="text">font: courier prime designed by alan dague-greene</div>
+		<div class="about container">
+			<section id="about">
+				<div class="about item">
+					<div class="about text">
+						sophie humbert
 					</div>
-					<div class="item-about">
-						<div class="text"><a href="mailto:soso-huhu@posteo.de">soso-huhu@posteo.de</a></div>
+					<div class="about text">
+						ulmenweg 55 haus 5 zimmer 7, 68167 mannheim
 					</div>
-					<div class="item-about">
-						<a href="index.html#section1"><button>&#10229 back</button></a>
+				</div>	
+				<div class="about item">
+					<div class="about link">
+						<a href="mailto:soso-huhu@posteo.de">soso-huhu@posteo.de</a>
 					</div>
-					<div class="item-about">
-						<form action="kontaktform.php" method="post">		
-							<div class="text">
-								<label for="name">name<span class="stern">*</span></label>
-								<input id="name" type="text" name="name" maxlength="30">
-							</div>
-							<div class="text">
-								<label for="mail">mail<span class="stern">*</span></label>
-								<input id="mail" type="text" name="mail" maxlength="30">
-							</div>
-							<div class="text">
-								<label for="betreff">subject</label>
-								<input id="betreff" type="text" name="betreff" maxlength="30">
-							</div>
-							<div class="text">
-								<label for="nachricht">message<span class="stern">*</span></label>
-								<textarea id="nachricht" rows="6" name="nachricht"></textarea>
-							</div>		
-							<div class="text">
-								<button id="absenden" type="submit" name="submit">senden</button>
-							</div>	
-						</form>
+					<div class="about link">
+						<a target="_blank" href="https://github.com/sophie-war-hier">github</a>
 					</div>
-					<div class="item-about">
-						<div class="text"><a href="index.html">&#10229 back</a></div>
-						<div class="text"><a target="_blank" href="datenschutz.pdf">data privacy policy</a></div>
+					<div class="about link">
+						<a target="_blank" href="https://www.instagram.com/sophie.war.hier/">instagram</a>
+					</div>
+					<div class="about link">
+						<a target="_blank" href="https://join.subs.tv/sophie.war.hier">subs</a>
 					</div>
 				</div>
-			</div>
-			<div class="item-content showcase">
-				<img src="bilder/sh-web-project-glas.png"><br>
-			</div>
+				<div class="about item">
+					<div class="about text">
+						font: epilogue designed by <a href="https://github.com/Etcetera-Type-Co/Epilogue">etcetera type</a>
+					</div>
+				</div>
+				<br>
+				<div class="about item">
+					<form action="kontaktform.php" method="post">		
+						<div class="about text">
+							<label for="name">name<span class="stern">*</span></label>
+							<input id="name" type="text" name="name" maxlength="30">
+						</div>
+						<div class="about text">
+							<label for="mail">mail<span class="stern">*</span></label>
+							<input id="mail" type="text" name="mail" maxlength="30">
+						</div>
+						<div class="about text">
+							<label for="betreff">subject</label>
+							<input id="betreff" type="text" name="betreff" maxlength="30">
+						</div>
+						<div class="about text">
+							<label for="nachricht">message<span class="stern">*</span></label>
+							<textarea id="nachricht" rows="6" name="nachricht"></textarea>
+						</div>		
+						<button id="absenden" type="submit" name="submit">senden</button>	
+					</form>
+				</div>
+				<div class="about item">
+					<div class="about link">
+						<a href="index.html">&#10229 back</a>
+					</div>
+					<div class="about link">
+						<a target="_blank" href="datenschutz.pdf">data privacy policys</a>
+					</div>
+				</div>
+			</section>
 		</div>
 	</body>
 </html>
+
+
+

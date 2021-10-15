@@ -1,199 +1,147 @@
-/*---Allgemeine Formatierung---*/
- * {
+:root { 
+  --prime-color: #ffffffee;
+  --second-color: #000000; 
+  --third-color: #9a4dff;
+  --fourth-color: rgba(0, 0, 0, 0.15);
+  --prime-font: "Epilogue-Regular", sans-serif;
+}
+
+
+@font-face {
+  font-family: "Epilogue-Regular";
+  src: url("Epilogue-Regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
   box-sizing: border-box;
 }
 
-html {
-	position: relative;
-}
-
 body {
-	font-family: 'Courier Prime', monospace;
-	font-size: 16px;
-	padding: 0;
-	margin: 0;
-	position: relative;
+  margin: 0;
+  font-family: var(--prime-font);
+  width: 100vw;
+}
 
+.text {
+  margin: 12px 0 16px 12px;
+  width: 75%;
+}
+
+.link {
+   margin: 4px 0 4px 12px;
+   width: 75%;
+}
+
+a:link, a:active, a:visited {
+  color: var(--third-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+a:focus-visible {
+  outline: none;
+  background-color: var(--fourth-color);
+}
+
+button {
+  font-family: var(--prime-font);
+  background-color: var(--fourth-color);
+  border: none;
+  padding: 5px 6px 4px 6px;
+  margin: 4px 0 4px 12px;
+}
+
+button:hover {
+  background-color: var(--third-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: none;
+  background-color: var(--fourth-color);
 }
 
 
-
-section {
-	background: #ffffff;
-	min-height: 100vh;
-	padding-bottom: 40px;
+input, textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  margin: 6px 0 6px 0;
+  font-family: var(--prime-font);
+  color: var(--third-color);
+  border-bottom: 1px solid var(--second-color); 
+  background-color: #ffffff00; 
 }
+
+input:focus-visible, textarea:focus-visible, button:focus-visible {
+    outline: none;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.showcase.item {
+  margin:  0 0 54px 0;
+}
+
+.showcase.img img {
+  width: 100%;
+}
+
+.about.container {
+  background-color: var(--prime-color) ;
+}
+
+.about.item {
+  width: 85%;
+  margin:  0 0 16px 0;
+}
+
 
 
 
 /*Snap Scroll, wenn der Benutzer nicht Animationen deaktivert hat*/
 @media (prefers-reduced-motion: no-preference) {
-	html,
-	body {
-		margin: 0;
-		padding: 0;
-		scroll-snap-type: y proximity;
-		scroll-behavior: smooth;
-		scroll-padding: 0;
-	}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+    scroll-padding: 0;
+  }
 
-	section {
-		scroll-snap-align: start;
-		scroll-margin: 0;
-	}
-}
-
-/*Text Formatierung*/
-.description {
-	margin: 10px 30px 10px 30px;
-}
-
-/*Buttons und Links*/
-button {
-	border: none;
-	background-color: rgba(0, 0, 0, 0.1);
-	padding: 6px 6px 4px 6px;
-	margin: 6px 4px 6px 0;
-	font-size: 85%;
-	font-family: 'Courier Prime', monospace;
-}
-
-button:hover {
-	background-color: rgba(255, 255, 255, 0.8);
-	transition: all 0.3s ease;
-	cursor: pointer;
-}
-
-button:focus-visible {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-a:link, a:active, a:visited {
-	color: #9a4dff;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #000000;
-	transition: all 0.3s ease;
-}
-
-a:focus-visible {
-	background-color: rgba(255, 255, 255, 0.8);
-	outline: none;
+  section {
+    scroll-snap-align: start;
+    scroll-margin: 0;
+  }
 }
 
 
-/*Inhalt Sruktur*/
-.container-content {
-	display: flex;
-	flex-flow: row wrap;
-	width: 100vw;
-	margin-left: auto;
-	margin-right: auto;
+@media (min-width: 900px) {
+.showcase.text {
+    width: 40%;
+  }
+
+.about.container {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25vw;
+    height: 100vw;
+    background-color: var(--prime-color) ;
+    z-index: 1;
+  }
 }
-
-.item-content {
-	text-align: left;
-}
-
-
-/*Links/Unten:  Schaukasten für die Arbeiten/Projekte*/
-.showcase {
-	width: 100%;
-	position: absolute;
-	z-index: 0;
-}
-
-/*Bilder der Projekte*/
-.showcase img {
-	height: auto;
-	width: 100%;
-}
-
-/*Rechts/Oben: Über mich + Kontaktmöglichkeiten*/
-.about {
-	width: 30%;
-	background-color: rgba(255, 255, 255, 0.8);
-	z-index: 1;
-	position: fixed;
-	right: 0px;
-	height: 100vh;
-}
-
-.about:hover {
-	background-color: rgba(255, 255, 255, 0.9);
-}
-
-
-.container-about {
-	display: flex;
-	flex-flow: column wrap;
-	margin: 20px;
-
-}
-
-.item-about {
-	margin: 10px;
-}
-
-/*Kontaktformular*/
-input, textarea {
-	background-color: rgba(0, 0, 0, 0.1);
-	border: none;
-	width: 100%;
-	padding: 4px;
-	margin: 6px 0 6px 0;
-	font-family: 'Courier Prime', monospace;
-	font-size: 85%;
-}
-
-
-input:focus-visible, textarea:focus-visible, button:focus-visible {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-
-/*Responsive*/
-@media (max-width: 900px) {
-	.about {
-	width: 55%;
-	}
-}
-
-@media (max-width: 500px) {
-	.about {
-	width: 80%;
-	position: relative;
-	}
-
-	.showcase {
-	width: 100%;
-	position: absolute;	
-	}
-}
-
-
-
-/*erster Versuch Galerie/Slider (noch nicht fertig*/
-.slider-outer-wrapper {
-	overflow: hidden;
-}
-
-
-.slider-inner-wrapper {
-	position: relative;
-	width: 50%;
-	margin: 0;
-	left: 0;
-	animation: 20s slider infinite;
-}
-
-
-.slider-inner-wrapper img {
-	width: 20%;
-	float: left;
-}
-
