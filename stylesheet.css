@@ -12,6 +12,7 @@
   src: url("font/Epilogue-Regular.woff2");
   font-weight: normal;
   font-style: normal;
+
 }
 
 
@@ -22,16 +23,17 @@
 body {
   margin: 0;
   font-family: var(--prime-font);
+  font-size: 18px;
   width: 100vw;
 }
 
 .text {
-  margin: 12px 0 16px 12px;
+  margin: 12px 0 16px 16px;
   width: 75%;
 }
 
 .link {
-   margin: 4px 0 4px 12px;
+   margin: 4px 0 4px 16px;
    width: 75%;
 }
 
@@ -55,7 +57,7 @@ button {
   background-color: var(--fourth-color);
   border: none;
   padding: 5px 6px 4px 6px;
-  margin: 4px 0 4px 12px;
+  margin: 4px 0 4px 16px;
 }
 
 button:hover {
